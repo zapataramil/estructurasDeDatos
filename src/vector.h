@@ -1,13 +1,5 @@
-/*
- * vector.h
- *
- *  Created on: 17/5/2020
- *      Author: ramil
- */
-
 #ifndef VECTOR_H_
 #define VECTOR_H_
-
 
 typedef int Datos;
 
@@ -17,6 +9,7 @@ private:
 	int longitud;
 
 public:
+
 	Vector();
 
 	Vector(int largo);
@@ -31,18 +24,11 @@ public:
 
 	void mostrar();
 
-	void redimensionar(int largo);
-
-	void copiarDatos(Datos* viejo,Datos*, int ciclos);
-
 	int obtenerTamanio();
-
-	void inicializar(Datos* dato, int longit);
 
 	void operator= (const Vector & vectorsito);
 
 	~Vector();
-
 
 };
 
