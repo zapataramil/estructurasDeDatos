@@ -41,15 +41,20 @@ Vector::Vector(const Vector & vec){
 
 
 void Vector::operator= (const Vector & vec){
-	if (vec.longitud > 0){
-		longitud = vec.longitud;
+	if (vec.dato != dato){
 		Datos* aux = new Datos[longitud];
+		if (longitud != vec.longitud)
+			longitud = vec.longitud;
 		copiarDatos(aux,vec.dato,longitud);
 		delete []dato;
 		dato = aux;
 	}
 }
 
+
+Datos& Vector::operator[](int posicion){
+	return dato[posicion-1];
+}
 
 void Vector::cargarDato(Datos valor, int pos){
 	if(pos > longitud){
@@ -88,5 +93,6 @@ int Vector::obtenerTamanio(){
 
 
 Vector::~Vector(){
-	delete []dato;
+	if(dato)
+		delete []dato;
 }

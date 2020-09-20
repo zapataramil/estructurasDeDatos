@@ -30,14 +30,14 @@ int main(){
 	v2.mostrar();
 	cout <<"VECTOR3: "<<endl;
 	v3.mostrar();
-	v2=v1;
-	v3=v1;
 	cout <<"VECTOR1: "<<endl;
 	v1.mostrar();
 	cout <<"VECTOR2: "<<endl;
 	v2.mostrar();
 	cout <<"VECTOR3: "<<endl;
 	v3.mostrar();
-
+	v3[1] = 1;
+	v3[2] = 2;
+	v3.mostrar();
 	return 0;
 }
