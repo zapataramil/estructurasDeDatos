@@ -15,6 +15,7 @@ void pruebasVector(){
 	v2.cargarDato(2,2);
 	v2.cargarDato(5,5);
 	v3.cargarDato(100,6);
+
 	if (!v1.estaVacio())
 		cout << "v1 its not empty!"<<endl;
 	cout << "En v1, en la posicion 2 tiene que haber un 10: "<<v1.obtenerDato(2)<<endl;
@@ -22,6 +23,7 @@ void pruebasVector(){
 	cout << "tamanio v2 es 5:"<<v2.obtenerTamanio()<<endl;
 	cout << "tamanio v3 es 6:"<<v3.obtenerTamanio()<<endl;
 	cout << "En v1 el valor en la posicion 2 es 10:"<<v1.obtenerDato(2)<<endl;
+
 	cout <<"VECTOR1: "<<endl;
 	v1.mostrar();
 	cout <<"VECTOR2: "<<endl;
