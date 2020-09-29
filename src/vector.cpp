@@ -53,7 +53,7 @@ void Vector::operator= (const Vector & vec){
 
 
 Datos& Vector::operator[](int posicion){
-	return dato[posicion-1];
+	return dato[posicion];
 }
 
 void Vector::cargarDato(Datos valor, int pos){
