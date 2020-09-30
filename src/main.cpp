@@ -2,6 +2,7 @@
 #include "pruebas.h"
 #include "vector.h"
 #include "mergeSort.h"
+#include "quickSort.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ int main(){
 	vec[2]=1;
 	vec[3]=9;
 	vec.mostrar();
-	Vector vec1 = mergesort(vec);
+	Vector vec1 = quicksort(vec);
 	vec1.mostrar();
 	return 0;
 }
