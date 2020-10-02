@@ -4,7 +4,7 @@
 #define QUICKSORT_H_
 
 
-Vector quicksort(Vector vec);
+void quicksort(Vector& vec);
 
 
 

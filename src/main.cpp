@@ -18,10 +18,10 @@ int main(){
 	Vector vec(4);
 	vec[0]=8;
 	vec[1]=4;
-	vec[2]=1;
-	vec[3]=9;
+	vec[2]=2;
+	vec[3]=1;
 	vec.mostrar();
-	Vector vec1 = quicksort(vec);
-	vec1.mostrar();
+	quicksort(vec);
+	vec.mostrar();
 	return 0;
 }
