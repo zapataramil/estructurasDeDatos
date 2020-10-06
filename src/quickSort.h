@@ -3,8 +3,9 @@
 #ifndef QUICKSORT_H_
 #define QUICKSORT_H_
 
-
+//ORDENAMIENTO POR QUICKSORT
 void quicksort(Vector& vec);
+
 
 
 

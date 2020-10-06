@@ -1,33 +1,18 @@
 #include "quickSort.h"
 #include <iostream>
+
 void intercambiar(int& a,int& b){
 	int aux=a;
 	a=b;
 	b=aux;
 }
 
-
-
-
-void quicksort(Vector &vec){
-
-	int tamanio = vec.obtenerTamanio();
-
-	if (tamanio < 1)
-		return;
-
-	int min=0,max=tamanio-2,pivot=tamanio-1;
-
-	if(tamanio==1){
-		if(vec[min]>vec[pivot])
-			intercambiar(vec[min],vec[pivot]);
-		return;
-	}
-
-	while(min < max){
-		if(vec[min]>vec[pivot]){
-			if(vec[max]<vec[pivot]){
-				intercambiar(vec[min],vec[max]);
+int pivot(Vector& vec,int min,int max){
+	int pivote=max;
+	while(min < (max-1)){
+		if(vec[min]>vec[pivote]){
+			if(vec[max-1]<vec[pivote]){
+				intercambiar(vec[min],vec[max-1]);
 				min++;
 				max--;
 			}else{
@@ -37,31 +22,23 @@ void quicksort(Vector &vec){
 			min++;
 	}
 
-	if(vec[min]>vec[pivot]){
-		intercambiar(vec[min],vec[pivot]);
-		min++;
-	}
-
-	Vector left(min+1);
-	Vector right(tamanio-(min+1));
-	for(int i=0; i<=min;i++)
-		left[i]=vec[i];
-	for(int i=0; i<=tamanio-min;i++)
-		right[i]=vec[min+1+i];
-
-	/*quicksort(left);
-
-
-	left.mostrar();
-	std::cout<<std::endl;
-
-	quicksort(right);
-
-	right.mostrar();
-	std::cout<<std::endl;
-
-	vec.mostrar();
-
-	*/
-
+	if(vec[min]>vec[pivote])
+		intercambiar(vec[min],vec[pivote]);
+	return min;
 }
+
+
+void quicksort1(Vector &vec,int min,int max){
+	if (min==max)
+		return;
+	int pivote = pivot(vec,min,max);
+	quicksort1(vec,min,pivote);
+	quicksort1(vec,pivote+1,max);
+}
+
+
+void quicksort(Vector& vectorsito){
+	quicksort1(vectorsito,0,vectorsito.obtenerTamanio()-1);
+}
+
+

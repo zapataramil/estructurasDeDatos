@@ -15,11 +15,12 @@ int main(){
 	//pruebasListaSimplementeEnlazada();
 
 
-	Vector vec(4);
-	vec[0]=8;
-	vec[1]=4;
-	vec[2]=2;
-	vec[3]=1;
+	Vector vec(5);
+	vec[0]=1;
+	vec[1]=8;
+	vec[2]=1;
+	vec[3]=5;
+	vec[4]=0;
 	vec.mostrar();
 	quicksort(vec);
 	vec.mostrar();
